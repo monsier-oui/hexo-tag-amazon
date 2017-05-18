@@ -22,6 +22,7 @@ hexo.extend.tag.register('amzn', function(args){
     'ItemId': asin,
     'ResponseGroup': 'ItemAttributes,Images'
   }).then(function(res){
+    var code = '';
     var result = res.result.ItemLookupResponse;
     if(result){
       var item = result.Items.Item;
@@ -55,7 +56,7 @@ hexo.extend.tag.register('amzn', function(args){
 
       var wishlist = item.ItemLinks.ItemLink[0];
 
-      var code = '<figure class="hexo-tag-amazon">'
+      code = '<figure class="hexo-tag-amazon">'
       +'<a href="'+url+'" class="hexo-tag-amazon-thumb"><img src="'+thumb+'"></a>'
       +'<figcaption class="hexo-tag-amazon-caption">'
       +'<a href="'+url+'" class="hexo-tag-amazon-title">'+title+'</a>'
@@ -67,11 +68,11 @@ hexo.extend.tag.register('amzn', function(args){
       +'<a href="'+url+'" class="hexo-tag-amazon-link">Buy</a>'
       +'</figcaption>'
       +'</figure>';
-
-      return code;
     }else{
       console.log(res.result.ItemLookupErrorResponse.Error.Message);
     }
+
+    return code;
   }).catch(function(err){
     console.log('Something went wrong! ', err);
   });
