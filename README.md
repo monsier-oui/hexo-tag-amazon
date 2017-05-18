@@ -1,6 +1,11 @@
 # hexo-tag-amazon
 Plugin to generate a link to Amazon for HEXO. This depends on [apac](https://www.npmjs.com/package/apac).
 
+## Install
+```
+npm install hexo-tag-amazon --saved
+```
+
 ## Usage
 ```
 {%amazon ISBN %}
