@@ -25,7 +25,6 @@ hexo.extend.tag.register('amzn', function(args){
     var result = res.result.ItemLookupResponse;
     if(result){
       var item = result.Items.Item;
-      // console.log('Item: ', JSON.stringify(item));
       var url = item.DetailPageURL;
       var thumb = item.MediumImage.URL;
 

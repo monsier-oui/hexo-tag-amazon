@@ -1,6 +1,6 @@
 {
   "name": "hexo-tag-amazon",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Generate a link for amazon",
   "main": "index.js",
   "scripts": {
