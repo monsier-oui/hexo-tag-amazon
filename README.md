@@ -8,8 +8,8 @@ npm install hexo-tag-amazon --saved
 
 ## Usage
 ```
-{%amazon ISBN %}
-{%amazon ASIN %}
+{%amzn ISBN %}
+{%amzn ASIN %}
 ```
 
 First, you should edit your `_config.yml` by adding following configuration.
