@@ -1,0 +1,26 @@
+{
+  "name": "hexo-tag-amazon",
+  "version": "0.0.2",
+  "description": "Generate a link for amazon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monsier-oui/hexo-tag-amazon.git"
+  },
+  "keywords": [
+    "hexo",
+    "plugin"
+  ],
+  "author": "oui",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/monsier-oui/hexo-tag-amazon/issues"
+  },
+  "homepage": "https://github.com/monsier-oui/hexo-tag-amazon#readme",
+  "dependencies": {
+    "apac": "^3.0.2"
+  }
+}
