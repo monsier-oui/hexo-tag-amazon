@@ -20,6 +20,7 @@ amazon_plugin:
   locale: US
   accessKey: xxxxxxx # Your Amazon Product Advertising API Access key ID
   accessKeySecret: xxxxxxxxxxxxxxx # Your Amazon Product Advertising API Secret access key
+  generateAlways: true # false -> Generate tag in "hexo generate"
 ```
 
 ### locale
