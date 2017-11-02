@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/monsier-oui/hexo-tag-amazon#readme",
   "dependencies": {
-    "apac": "^3.0.2"
+    "apac": "^3.0.2",
+    "hexo-env": "0.0.1"
   }
 }

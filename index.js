@@ -1,10 +1,12 @@
 'use strict';
 
+var hexoEnv = require('hexo-env');
 var OperationHelper = require('apac').OperationHelper;
 
 hexo.extend.tag.register('amzn', function(args){
   if(!args) return;
   if(!hexo.config.amazon_plugin) return;
+  if(!hexo.config.amazon_plugin.generateAlways && hexoEnv.env(hexo) == 'development') return;
 
   var asin = args[0];
   var id = hexo.config.amazon_plugin.id;
