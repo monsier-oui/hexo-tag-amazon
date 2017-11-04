@@ -1,12 +1,21 @@
 'use strict';
 
-var hexoEnv = require('hexo-env');
 var OperationHelper = require('apac').OperationHelper;
+
+function isDev(){
+  if(process.argv.length > 2 && (process.argv[2].match(/^d/) || process.argv[2].match(/^g/))){
+    // console.log("hexo-env: production");
+    return false;
+  }else{
+    // console.log("hexo-env: development");
+    return true;
+  }
+}
 
 hexo.extend.tag.register('amzn', function(args){
   if(!args) return;
   if(!hexo.config.amazon_plugin) return;
-  if(!hexo.config.amazon_plugin.generateAlways && hexoEnv.env(hexo) == 'development') return;
+  if(!hexo.config.amazon_plugin.generateAlways && isDev()) return;
 
   var asin = args[0];
   var id = hexo.config.amazon_plugin.id;
